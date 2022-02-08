@@ -1,0 +1,20 @@
+.mybody {
+    background: #eee;
+}
+.page-container {
+    max-width: 60rem;
+    font-family: sans-serif;
+    margin: 0 auto;
+    background: white;
+}
+.middle {
+    display: flex;
+    min-height: 30rem;
+}
+.nav {
+    background-color: #ccc;
+}
+.nav a {
+    display: inline-block;
+    padding: 0.5em 1em;
+}
