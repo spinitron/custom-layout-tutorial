@@ -16,9 +16,10 @@
 }
 .nav a {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     color: #0a4ba6;
 }
-.leftnav a {
+.nav.leftnav a {
     display: block;
+    min-width: 6em;
 }
