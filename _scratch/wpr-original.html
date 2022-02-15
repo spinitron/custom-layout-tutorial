@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"8d7a4982ef",applicationID:"17973382"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>  <!--[if IE]><![endif]-->
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="preconnect" href="//fonts.gstatic.com" crossorigin="" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="preconnect" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//code.jquery.com" />
+<link rel="preconnect" href="//code.jquery.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="preconnect" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+<link rel="preconnect" href="//stats.g.doubleclick.net" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.wpr.org/sites/default/files/favicon_0_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4, minimum-scale=1, user-scalable=yes" />
+<meta name="author" content="Uncredited" />
+<meta name="type" content="No type" />
+<meta name="category" content="Uncategorized" />
+<meta name="description" content="Wisconsin Public Radio features in-depth news from WPR’s seven bureaus and NPR, entertainment programs, classical music and discussions on the Ideas Network." />
+<meta name="keywords" content="Wisconsin Public Radio, WPR, Wisconsin News, Wisconsin Politics, Wisconsin, Public Radio, Music, Classical Music, Entertainment, Arts, Culture, In-Depth News, Analysis, NPR in Wisconsin" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="image_src" href="https://www.wpr.org/sites/default/files/images/logo/WPR-fb-1200x627.png" />
+<link rel="canonical" href="https://www.wpr.org/news" />
+<link rel="shortlink" href="https://www.wpr.org/news" />
+<meta property="og:site_name" content="Wisconsin Public Radio" />
+<meta property="og:type" content="non_profit" />
+<meta property="og:url" content="https://www.wpr.org/news" />
+<meta property="og:title" content="News" />
+<meta property="og:image" content="https://www.wpr.org/sites/default/files/images/logo/WPR-fb-1200x627.png" />
+  <title>News | Wisconsin Public Radio</title>
+  <style type="text/css" media="all">@import url("/modules/system/system.base.css?r71dc1");@import url("/modules/system/system.menus.css?r71dc1");@import url("/modules/system/system.messages.css?r71dc1");@import url("/modules/system/system.theme.css?r71dc1");</style>
+<style type="text/css" media="all">@import url("/sites/all/libraries/mediaelement/build/mediaelementplayer.min.css?r71dc1");@import url("/sites/all/modules/blazy/css/blazy.css?r71dc1");@import url("/sites/all/modules/blazy/css/components/blazy.filter.css?r71dc1");@import url("/sites/all/modules/blazy/css/components/blazy.ratio.css?r71dc1");@import url("/sites/all/modules/blazy/css/components/blazy.loading.css?r71dc1");</style>
+<style type="text/css" media="all">@import url("/sites/all/modules/cache_consistent/css/cache_consistent.css?r71dc1");@import url("/sites/all/modules/calendar/css/calendar_multiday.css?r71dc1");@import url("/sites/all/modules/date/date_repeat_field/date_repeat_field.css?r71dc1");@import url("/modules/field/theme/field.css?r71dc1");@import url("/modules/node/node.css?r71dc1");@import url("/sites/all/modules/picture/picture_wysiwyg.css?r71dc1");@import url("/modules/search/search.css?r71dc1");@import url("/modules/user/user.css?r71dc1");@import url("/sites/all/modules/extlink/css/extlink.css?r71dc1");@import url("/sites/all/modules/views/css/views.css?r71dc1");@import url("/sites/all/modules/ckeditor/css/ckeditor.css?r71dc1");@import url("/sites/all/modules/media/modules/media_wysiwyg/css/media_wysiwyg.base.css?r71dc1");</style>
+<style type="text/css" media="all">@import url("/sites/all/modules/colorbox/styles/default/colorbox_style.css?r71dc1");@import url("/sites/all/modules/ctools/css/ctools.css?r71dc1");@import url("/sites/all/modules/content_type_extras/css/content_type_extras.css?r71dc1");@import url("/sites/all/modules/date/date_api/date.css?r71dc1");@import url("/sites/all/libraries/fontawesome/css/font-awesome.css?r71dc1");@import url("/sites/all/themes/wprtheme/css/print.css?r71dc1");@import url("/sites/all/themes/wprtheme/jplayer/jplayer.css?r71dc1");@import url("/sites/all/libraries/sidr/stylesheets/jquery.sidr.dark.css?r71dc1");</style>
+<style type="text/css" media="all">@import url("/sites/wpr.org/themes/omega/alpha/css/alpha-reset.css?r71dc1");@import url("/sites/wpr.org/themes/omega/alpha/css/alpha-mobile.css?r71dc1");@import url("/sites/wpr.org/themes/omega/alpha/css/alpha-alpha.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/formalize.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/omega-text.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/omega-branding.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/omega-menu.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/omega-forms.css?r71dc1");@import url("/sites/wpr.org/themes/omega/omega/css/omega-visuals.css?r71dc1");</style>
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,italic,regular|Raleway:300,300italic,500,700,700italic,italic,regular&amp;subset=latin" media="all" />
+<style type="text/css" media="all">@import url("/sites/default/files/fontyourface/local_fonts/Cubano-normal-normal/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Proxima_Nova-italic-bold/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Proxima_Nova-italic-normal/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Proxima_Nova-normal-bold/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Proxima_Nova-normal-normal/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Sina_Nova-italic-bold/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Sina_Nova-italic-normal/stylesheet.css?r71dc1");@import url("/sites/default/files/fontyourface/local_fonts/Sina_Nova-normal-normal/stylesheet.css?r71dc1");@import url("/sites/all/themes/wprtheme/css/global.css?r71dc1");</style>
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default.css?r71dc1");@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default-normal.css?r71dc1");@import url("/sites/wpr.org/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?r71dc1");</style>
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default.css?r71dc1");@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default-narrow.css?r71dc1");@import url("/sites/wpr.org/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?r71dc1");</style>
+<!--<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default.css?r71dc1");@import url("/sites/all/themes/wprtheme/css/wprtheme-alpha-default-normal.css?r71dc1");@import url("/sites/wpr.org/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?r71dc1");</style>
+<!--<![endif]-->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-9516785-1";
+//--><!]]>
+</script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__WMeSQca1S5dEawEDGSWGwNz1FSgXmiu3FVQzX58ebuk__Oo1Q3Ag0o-r06G4Nxb0BWE6YrzSPu6Wz7borf3pKOVc__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js"></script>
+<script type="text/javascript" src="/sites/all/libraries/mediaelement/build/mediaelement-and-player.min.js?v=4"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__9SDp9pDORY0MOhIJdYn4VlHxKjZbaRlHd7BxtA2MAqM__kQWlzl2fhywgwqcKPAN-JPQaexXgRtfTavmkGNDDFO8__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-9516785-1", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__yyWvyne0RSrHnyhWde56gpDuOJMhA1ggrxQnmgbNBu8__JMcP7B-LPQO0uDj7xHXaGORLqh5H9JyTP-WwBrWYQeY__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"wprtheme","theme_token":"yVrfvCXMNkK7UjekW5UELBeZR1vlztbK83Qf8_ql58o","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/mediaelement\/build\/mediaelementplayer.min.css":1,"sites\/all\/modules\/blazy\/css\/blazy.css":1,"sites\/all\/modules\/blazy\/css\/components\/blazy.filter.css":1,"sites\/all\/modules\/blazy\/css\/components\/blazy.ratio.css":1,"sites\/all\/modules\/blazy\/css\/components\/blazy.loading.css":1,"sites\/all\/modules\/cache_consistent\/css\/cache_consistent.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/extlink\/css\/extlink.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/amazon_pa\/amazon.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/content_type_extras\/css\/content_type_extras.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/libraries\/fontawesome\/css\/font-awesome.css":1,"sites\/all\/themes\/wprtheme\/css\/print.css":1,"sites\/all\/themes\/wprtheme\/jplayer\/jplayer.css":1,"sites\/all\/libraries\/sidr\/stylesheets\/jquery.sidr.dark.css":1,"sites\/wpr.org\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/wpr.org\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/wpr.org\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/wpr.org\/themes\/omega\/omega\/css\/omega-visuals.css":1,"https:\/\/fonts.googleapis.com\/css?family=Merriweather:300,300italic,700,700italic,italic,regular|Raleway:300,300italic,500,700,700italic,italic,regular\u0026subset=latin":1,"public:\/\/fontyourface\/local_fonts\/Cubano-normal-normal\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Proxima_Nova-italic-bold\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Proxima_Nova-italic-normal\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Proxima_Nova-normal-bold\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Proxima_Nova-normal-normal\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Sina_Nova-italic-bold\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Sina_Nova-italic-normal\/stylesheet.css":1,"public:\/\/fontyourface\/local_fonts\/Sina_Nova-normal-normal\/stylesheet.css":1,"sites\/all\/themes\/wprtheme\/css\/global.css":1,"ie::normal::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default.css":1,"ie::normal::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default-normal.css":1,"ie::normal::sites\/wpr.org\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"narrow::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default.css":1,"narrow::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default-narrow.css":1,"sites\/wpr.org\/themes\/omega\/alpha\/css\/grid\/alpha_default\/narrow\/alpha-default-narrow-12.css":1,"normal::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default.css":1,"normal::sites\/all\/themes\/wprtheme\/css\/wprtheme-alpha-default-normal.css":1,"sites\/wpr.org\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1},"js":{"sites\/all\/libraries\/jplayer\/jquery.jplayer.min.js":1,"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"sites\/all\/libraries\/sidr\/jquery.sidr.min.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"\/\/code.jquery.com\/jquery-1.7.2.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/wprtheme\/js\/wpr.js":1,"sites\/all\/modules\/equalheights\/jquery.equalheights.js":1,"sites\/all\/libraries\/blazy\/blazy.min.js":1,"sites\/all\/modules\/blazy\/js\/dblazy.min.js":1,"sites\/all\/modules\/blazy\/js\/bio.min.js":1,"sites\/all\/modules\/blazy\/js\/bio.media.min.js":1,"sites\/all\/modules\/blazy\/js\/blazy.load.min.js":1,"sites\/all\/libraries\/jquery.maphilight\/jquery.maphilight.min.js":1,"sites\/all\/libraries\/mediaelement\/build\/mediaelement-and-player.min.js":1,"sites\/all\/modules\/equalheights\/equalheights.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/jq_maphilight\/jq_maphilight.js":1,"sites\/all\/modules\/mediaelement\/mediaelement.js":1,"sites\/all\/libraries\/imagesloaded\/jquery.imagesloaded.min.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/extlink\/js\/extlink.js":1,"sites\/wpr.org\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/wpr.org\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"100%","maxHeight":"100%","initialWidth":"300","initialHeight":"225","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"500px","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"jq_maphilight":{"fill":"true","fillColor":"000000","fillOpacity":0.20000000000000001,"stroke":"true","strokeColor":"ff0000","strokeOpacity":1,"strokeWidth":"2","fade":"true","alwaysOn":"false","neverOn":"false","groupBy":"false","allMapsEnabled":"true"},"mediaelementAll":true,"equalHeightsModule":{"classes":[{"selector":".series-story .story-title","mediaquery":"(min-width: 768px)","minheight":"","maxheight":"","overflow":"visible"},{"selector":".featured-story, .story-box","mediaquery":"(min-width: 1300px)","minheight":"","maxheight":"","overflow":"visible"},{"selector":".story-title.hightolerance","mediaquery":"(min-width: 768px)","minheight":"","maxheight":"","overflow":"visible"},{"selector":".view-id-front_page_slideshows .views-limit-grouping-group","mediaquery":"","minheight":"","maxheight":"","overflow":"visible"},{"selector":"#block-wpr-custom-second-feature-list .feature","mediaquery":"(min-width: 768px)","minheight":"","maxheight":"","overflow":"visible"},{"selector":".story-title.derailed","mediaquery":"(min-width: 768px)","minheight":"","maxheight":"","overflow":"visible"}],"imagesloaded_ie8":1},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"urlIsAjaxTrusted":{"\/news":true},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":1,"extExclude":"(wpt\\.org)|(wiscontext\\.org)|(wpt4\\.org)|(wisconsinlife\\.org)|(ttbook\\.org)","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)","extUseFontAwesome":false},"omega":{"layouts":{"primary":"normal","order":["narrow","normal"],"queries":{"narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)"}}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"password":{"strengthTitle":"Password compliance:"},"type":"setting"});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+  <script type='text/javascript'>
+    (function() {
+        /** CONFIGURATION START **/
+        var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+        _sf_async_config.uid = 33583;
+        _sf_async_config.domain = 'www.wpr.org';
+        _sf_async_config.flickerControl = false;
+        _sf_async_config.useCanonical = true;
+        _sf_async_config.useCanonicalDomain = true;
+        _sf_async_config.sections = document.querySelector('meta[name="category"]').getAttribute("content");
+        _sf_async_config.authors = document.querySelector('meta[name="author"]').getAttribute("content");
+        _sf_async_config.type = document.querySelector('meta[name="type"]').getAttribute("content");
+        /** CONFIGURATION END **/
+        function loadChartbeat() {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('script')[0];
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = '//static.chartbeat.com/js/chartbeat.js';
+            n.parentNode.insertBefore(e, n);
+        }
+        loadChartbeat();
+     })();
+</script>
+</head>
+<body class="html not-front not-logged-in page-news context-news">
+<!-- Google Publisher Tags implementation for underwriting slots -->
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1006475/WPR_ORG_300x250A', [300, 250], 'div-gpt-ad-1495910762556-0').addService(googletag.pubads());
+    googletag.defineSlot('/1006475/WPR_ORG_300x250B', [300, 250], 'div-gpt-ad-1495910887526-0').addService(googletag.pubads());
+    googletag.defineSlot('/1006475/WPR_LIVEPLAYER', [300, 250], 'div-gpt-ad-1495914522370-0').addService(googletag.pubads());
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<!-- End Google Publisher Tags -->
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <!--img alt="" class="fb_hidden_image element-invisible" src="/sites/default/files/media/WPR_Logo_Small.jpg"-->
+    <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-12 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="block block-block wpr-logo-text block-14 block-block-14 odd block-without-title" id="block-block-14">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="header-logo"><a href="/"><span>Wisconsin Public Radio</span></a></div>
+<script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+            ttd_dom_ready( function() {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("o16gzug", ["h4kj9yy"], "https://insight.adsrvr.org/track/up");
+                }
+            });
+
+//--><!]]>
+</script>    </div>
+  </div>
+</div><div class="block block-search block-form block-search-form even block-without-title" id="block-search-form">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <form action="/news" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-ppji360bXomCCUVR15Uun03P0-Ko5C_JWYqd_t8zMj0" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>    </div>
+  </div>
+</div><div class="block block-block support follow block-26 block-block-26 odd block-without-title" id="block-block-26">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div><a class="support-block-link red" href="/donate" target="_blank">Donate</a></div>
+<div class="follow-links"><a class="facebook-follow" href="https://www.facebook.com/wisconsinpublicradio" style="width:29px;padding-right:5px;display:inline-block; text-align:center;"><i aria-hidden="true" class="fa fa-facebook-official" style="font-size:29px;color:#4267B2;"><span class="wpr-sr-only">WPR Facebook</span></i></a> <a class="twitter-follow" href="https://twitter.com/WPR" style="width:29px;padding-right:5px;display:inline-block; text-align:center;"><i aria-hidden="true" class="fa fa-twitter" style="font-size:29px;color:#1DA1F2;"><span class="wpr-sr-only">WPR Twitter</span></i></a> <a class="instagram-follow" href="https://www.instagram.com/wisconsinpublicradio/" style="width:29px;display:inline-block; text-align:center;"><i aria-hidden="true" class="fa fa-instagram" style="font-size:29px;color:000000;"><span class="wpr-sr-only">WPR Instagram</span></i></a></div>
+    </div>
+  </div>
+</div><div class="block block-block search-sponsor-block block-81 block-block-81 even block-without-title" id="block-block-81">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <!-- WPR_ORG_Search_234x60 --><div id="div-gpt-ad-1415984171221-0" style="width:234px; height:60px;">
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1415984171221-0'); });
+
+//--><!]]>
+</script></div>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-block menu-panel block-30 block-block-30 odd block-without-title" id="block-block-30">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="menu-tab">Menu</div>
+<p><a class="listen-tab popup-player" href="/listen-live">Listen Live</a></p>
+    </div>
+  </div>
+</div><section class="block block-menu pushdown-menu block-menu-verticals block-menu-menu-verticals even" id="block-menu-menu-verticals">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Menu</h2>
+
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/" title="">Home</a></li>
+<li class="leaf"><a href="https://www.wpr.org/donate" class="donate" target="_blank">Donate</a></li>
+<li class="leaf"><a href="/ideas-schedule" class="program-notes">Program Notes</a></li>
+<li class="leaf"><a href="/search" class="search">Search</a></li>
+<li class="leaf active-trail"><a href="/news" class="link-pushdown pushdown-news active-trail active">News</a></li>
+<li class="leaf"><a href="/weather" class="pushdown-weather">Weather</a></li>
+<li class="leaf"><a href="/weather" class="events-mobile">Weather</a></li>
+<li class="leaf"><a href="/arts-and-culture" class="link-pushdown pushdown-entertainment">Arts &amp; Culture</a></li>
+<li class="leaf"><a href="/music" class="link-pushdown pushdown-music">Music</a></li>
+<li class="leaf"><a href="/events/monthly" class="link-pushdown pushdown-events">Events</a></li>
+<li class="leaf"><a href="/events/day" class="events-mobile">Events</a></li>
+<li class="leaf"><a href="/programs" class="link-pushdown pushdown-program">Shows</a></li>
+<li class="leaf"><a href="/programs/mobile" class="shows-mobile">Shows</a></li>
+<li class="leaf"><a href="/about-wisconsin-public-radio" class="link-pushdown pushdown-about">About WPR</a></li>
+<li class="last leaf"><a href="/support" class="link-pushdown pushdown-support support">Support</a></li>
+</ul>    </div>
+  </div>
+</section>  </div>
+</div>
+  </div>
+</div></header>
+      <section id="section-content" class="section section-content">
+  <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">
+  <div id="zone-preface" class="zone zone-preface clearfix container-12">
+    <div class="grid-4 region region-preface-first" id="region-preface-first">
+  <div class="region-inner region-preface-first-inner">
+    <div class="block block-block block-pushdown pushdown-weather weather-conditions block-28 block-block-28 odd block-without-title" id="block-block-28">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="block-preface">
+<ul class="weather-menu">
+<li><a href="/weather/conditions-forecast">Conditions and Forecast</a></li>
+<li><a href="/weather/maps-radar">Maps and Radar</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-entertainment block-34 block-block-34 even block-without-title" id="block-block-34">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <ul class="menu nav-menu">
+<li class="first leaf"><a href="/arts-and-culture">Arts &amp; Culture</a></li>
+<li class="leaf"><a href="/music">Music</a></li>
+<li class="leaf"><a href="/topics/film">Film</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="last leaf"><a href="/topics/books">Books</a></li>
+<li class="last leaf"><a href="/topics/food">Food</a></li>
+<li class="leaf"><a href="/topics/art">Art</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="first leaf"><a href="/topics/digital-media">Digital Media</a></li>
+<li class="first leaf"><a href="/topics/games-and-humor">Games &amp; Humor</a></li>
+<li class="last leaf"><a class="more-content" href="/arts-and-culture">More</a></li>
+</ul>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-music block-36 block-block-36 odd block-without-title" id="block-block-36">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content">
+<ul class="menu nav-menu">
+<li class="program-section"><strong>Genre</strong></li>
+<li><a href="/topics/classical-music">Classical Music</a></li>
+<li><a href="/topics/folk">Folk</a></li>
+<li><a href="/topics/jazz">Jazz</a></li>
+<li><a href="/topics/pop-music">Pop Music</a></li>
+<li><a href="/topics/world-music">World Music</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="program-section"><strong>Music Request Forms</strong></li>
+<li><a href="/programs/classics-request">Classics by Request</a></li>
+<li><a href="/simply-folk-request">Simply Folk</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="program-section"><strong>Music Series</strong></li>
+<li><a href="/series/wpr-music">WPR Music Blog</a></li>
+<li><a href="/programs/wisconsin-classical">Wisconsin Classical</a></li>
+<li><a href="/series/simply-folk-interviews">Simply Folk Interviews</a></li>
+<li><a href="/programs/metropolitan-opera">The Metropolitan Opera</a></li>
+<li><a href="/series/grace-notes">Grace Notes</a></li>
+<li><a href="/programs/odyssey-series">The Odyssey Series</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li><a href="/classical-music-lists">Classical Music Playlist</a></li>
+<li><a href="/folk-music-lists" target="_blank">Folk Music Playlist</a></li>
+<li class="more-content"><a href="/music">More</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-about block-22 block-block-22 even block-without-title" id="block-block-22">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content" style="padding-left: 1px !important;">
+<ul class="menu" style="margin-left: 0px !important;">
+<li class="program-section">About Us</li>
+<li><a href="/about-wpr">Who Are We?</a></li>
+<li><a href="/jobs">Career Opportunities</a></li>
+<li><a href="/support/volunteer">Volunteering</a></li>
+<li><a href="/100">Our First 100 Years</a></li>
+<li><a href="/travel">Travel With WPR</a></li>
+</ul>
+<ul class="menu" style="margin-left: -30px !important;">
+<li class="program-section">Contact Us</li>
+<li><a href="/email-and-questions">Listener Questions/Feedback</a></li>
+<li><a href="/news-tip">Sending News Tips</a></li>
+<li><a href="/support/wpr-membership-faq#gen1">Member/Donation Questions</a></li>
+<li><a href="/regional-offices">Regional Offices</a></li>
+<li><a href="/staff">Staff Directory</a></li>
+<li><a href="/online-community">Online Community</a></li>
+<li><a href="/presents">WPR Presents - Live Events</a></li>
+<li><a href="/related-links">Related Links</a></li>
+</ul>
+<ul class="menu" style="margin-left: -30px !important;">
+<li class="program-section" style="margin-left: 5px !important;">Stations, Schedules &amp; Content</li>
+<li><a href="/regions">Stations, Schedules &amp; Regional Studios</a></li>
+<li><a href="/network-coverage-maps">Network Station Maps</a></li>
+<li><a href="/improving-radio-reception">Improving Your Radio Reception</a></li>
+<li><a href="/hd-radio-service">WPR's HD Radio Service</a></li>
+<li><a href="/streams">Live Online Streams</a></li>
+<li><a href="/smart">Smart Speakers</a></li>
+<li><a href="/audio-archives">Audio Archives</a></li>
+<li><a href="/podcasts">Our Podcasts</a></li>
+<li><a href="/mobile">Mobile Apps</a></li>
+</ul>
+<ul class="menu" style="margin-left: -10px !important;">
+<li class="program-section" style="margin-left: 5px !important;">Policies &amp; Reports</li>
+<li><a href="/newsletters">Email Newsletters</a></li>
+<li><a href="/wpr-annual-reports">Annual Reports</a></li>
+<li><a href="/wpr-ethical-guidelines">Ethical Guidelines</a></li>
+<li><a href="/social-media-guidelines">Social Media Guidelines</a></li>
+<li><a href="/caller-guidelines">Call-In Guidelines</a></li>
+<li><a href="/open-meetings-information">Open Meetings</a></li>
+<li><a href="/legal-filings">Local Content Reports</a></li>
+<li><a href="/wpr-public-inspection-files">FCC Public Inspection Files</a></li>
+<li><a href="/wisconsin-public-radio-financial-statement">Financial Statements</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-support block-23 block-block-23 odd block-without-title" id="block-block-23">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content nav-support-menu">
+<ul class="menu nav-menu">
+<li class="first-leaf"><a href="/support/sponsor">Business Sponsorship</a></li>
+<li class="leaf"><a href="/support/donor-advised-fund-daf-gifts">DAF Gifts</a></li>
+<li class="leaf"><a href="/support/ira-charitable-rollover">IRA Gifts</a></li>
+<li class="leaf"><a href="/support/major-gifts">Leadership Gifts</a></li>
+<li class="last-leaf"><a href="/support/matching-gifts-information">Matching Gifts</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="first leaf"><a href="/support/stock">Stock Gifts</a></li>
+<li class="leaf"><a href="/support/wpr-sustainer">Sustaining Gifts</a></li>
+<li class="leaf"><a href="/support/car-donation">Vehicle Donation</a>s</li>
+<li class="leaf"><a href="/support/volunteer">Volunteer</a></li>
+<li class="last leaf"><a href="https://www.wprlegacy.org/">Wills &amp; Bequests</a></li>
+</ul>
+<ul class="menu nav-menu">
+<li class="first-leaf"><a href="/support/wpr-membership-faq">FAQ</a></li>
+<li class="leaf"><a href="/support/wpr-funding-information">Funding Information</a></li>
+<li class="leaf"><a href="/support/wpr-membership-faq#gen1">Contact Membership Services</a></li>
+<li class="last-leaf"><strong><a href="/donate">Donate Now</a></strong></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-program block-37 block-block-37 even block-without-title" id="block-block-37">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content" style="padding-left: -8px;">
+<ul class="menu" style="margin-left: -7px;">
+<li class="program-section" style="font-size: 1.2em;"><a href="/programs">Programs</a></li>
+<li><a href="/programs/morning-show">The Morning Show</a></li>
+<li><a href="/programs/larry-meiller-show">The Larry Meiller Show</a></li>
+<li><a href="/programs/central-time">Central Time</a></li>
+<li><a href="/programs/chapter-day">Chapter A Day</a></li>
+<li><a href="/programs/beta">BETA</a></li>
+<li><a href="/programs/prx-remix">PRX Remix</a></li>
+<li><a href="/programs/garden-talk">Garden Talk</a></li>
+<li><a href="https://www.ttbook.org">To The Best Of Our Knowledge</a></li>
+<li><a href="/programs/university-air">University Of The Air</a></li>
+<li><a href="/programs/zorba-paster-your-health">Zorba Paster On Your Health</a></li>
+</ul>
+<ul class="menu" style="margin-left: -26px; margin-top: 4px;">
+<li><a href="/programs/all-things-considered">All Things Considered</a></li>
+<li><a href="/programs/fresh-air">Fresh Air</a></li>
+<li><a href="/programs/marketplace">Marketplace</a></li>
+<li><a href="/programs/morning-edition">Morning Edition</a></li>
+<li><a href="/programs/takeaway">The Takeaway</a></li>
+<li><a href="/programs/point">On Point</a></li>
+<li><a href="/programs/1a">1A / 1A Plus</a></li>
+<li><a href="/programs/science-friday">Science Friday</a></li>
+<li><a href="https://www.wisconsinlife.org/">Wisconsin Life</a></li>
+<li><a href="/politics">WPR Politics</a></li>
+<li><a href="/programs/special-programming">Special Programs</a></li>
+</ul>
+<ul class="menu" style="margin-left: -28px;">
+<li class="program-section" style="font-size: 1.2em;">Music</li>
+<li><a href="/programs/morning-classics">Morning Classics</a></li>
+<li><a href="/programs/midday">The Midday</a></li>
+<li><a href="/programs/classics-request">Classics by Request</a></li>
+<li><a href="/programs/higher-ground">The Road to Higher Ground<br />
+	with Jonathan Øverby</a></li>
+<li><a href="/programs/simply-folk">Simply Folk</a></li>
+<li><a href="/programs/sunday-brunch">Sunday Brunch</a></li>
+<li><a href="/programs/wisconsin-classical">Wisconsin Classical</a></li>
+<li><a href="/programs/metropolitan-opera">The Metropolitan Opera</a></li>
+<li class="more-content"><a href="/program-notes">Ideas Network Program Notes</a></li>
+<li class="more-content"><a href="/programs/archives/all">All Audio Archives</a></li>
+</ul>
+<ul class="menu" style="margin-left: -30px;">
+<li class="program-section" style="font-size: 1.2em;">Regional Programs</li>
+<li><a href="/programs/newsmakers">Newsmakers</a></li>
+<li><a href="/programs/route-51">Route 51</a></li>
+<li><a href="/programs/simply-superior">Simply Superior</a></li>
+<li><a href="/programs/spectrum-west-al-ross">Spectrum West</a></li>
+<li><a href="/programs/west-side">The West Side</a></li>
+<li></li>
+<li></li>
+<li class="more-content"><a href="/programs">All Current Programs</a></li>
+<li class="more-content"><a href="/programs/retired">Retired Programs</a></li>
+</ul>
+<ul class="menu" style="margin-left: -30px;">
+<li class="program-section" style="font-size: 1.2em;"><a href="/podcasts">Podcasts</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-news block-35 block-block-35 odd block-without-title" id="block-block-35">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content">
+<ul class="menu" style="margin-left: -3px;">
+<li><a href="/news">All WPR News</a></li>
+</ul>
+<ul class="menu" style="margin-left: -2px;">
+<li class="program-section"><strong>News By Topic</strong></li>
+<li class="leaf"><a href="/topics/agriculture">Agriculture</a></li>
+<li class="leaf"><a href="/arts-and-culture">Arts &amp; Culture</a></li>
+<li class="leaf"><a href="/topics/justice">Criminal Justice</a></li>
+<li class="leaf"><a href="/topics/education">Education</a></li>
+<li class="leaf"><a href="/topics/environment">Environment</a></li>
+</ul>
+<ul class="menu" style="margin-left: -2px;">
+<li class="leaf"><a href="/topics/health">Health</a></li>
+<li class="leaf"><a href="/topics/money">Money</a></li>
+<li class="leaf"><a href="/politics">Politics</a></li>
+<li class="leaf"><a href="/topics/science-and-technology">Science &amp; Technology</a></li>
+<li class="leaf"><a href="/topics/social-issues">Social Issues</a></li>
+<li class="leaf"><a href="/topics/sports">Sports</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-pushdown pushdown-events block-171 block-block-171 even block-without-title" id="block-block-171">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="content">
+<ul class="menu nav-menu">
+<li class="first-leaf"><a href="/events">All Events</a></li>
+<li class="leaf"><a href="/programs/simply-folk/events">Folk Events</a></li>
+<li class="last-leaf"><a href="/presents">WPR Presents</a></li>
+</ul>
+</div>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">
+
+  <div id="zone-content" class="zone zone-content clearfix container-12">
+
+        <div class="grid-12 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                        <div class="block block-block listen-live block-6 block-block-6 odd block-without-title" id="block-block-6">
+  <div class="block-inner clearfix">
+                <h2 class="block-title"><a class="live-player popup-player" href="/listen-live">Listen Live</a></h2>
+
+    <div class="content clearfix">
+
+	<div id="listen-ideas" class="listen-section network">
+		<a href="/listen-live?network=ideas" class="live-player popup-player"><div class="play-button"></div><h4>The Ideas Network</h4></a>
+		<a class="network-schedule" href="/ideas-network/weekly"><h4>Program Schedule</h4></a>
+		<a class="program-notes" href="/program-notes"><h4>Program Notes</h4></a>
+	</div>
+
+	<div class='listen-section network' id="listen-news">
+		<a href="/listen-live?network=news" class="live-player popup-player"><div class="play-button"></div><h4>NPR News & Music Network</h4></a>
+		<a class="network-schedule" href="/news-classical-network/weekly"><h4>Program Schedule</h4></a>
+		<a class="classical-playlist" href="/classical-music-lists"><h4>Music Playlists</h4></a>
+	</div>
+
+	<div class='listen-section network' id="listen-classical">
+		<a href="/listen-live?network=classical" class="live-player popup-player"><div class="play-button"></div><h4>All Classical Network</h4></a>
+		<a class="network-schedule" href="/all-classical-network/weekly"><h4>Program Schedule</h4></a>
+		<a class="classical-playlist" href="/all-classical-network-playlists"><h4>Music Playlists</h4></a>
+	</div>
+
+	<div class='listen-section network' id="listen-specialevents">
+		<a href="/listen-live?network=specialevents" class="live-player popup-player"><div class="play-button"></div><h4>Special Events Stream</h4></a>
+	</div>
+
+    </div>
+  </div>
+</div>
+		<aside class="grid-6 region region-content-top" id="region-content-top">
+		  <div class="region-inner region-content-top-inner">
+			<div class="block block-block term-header block-41 block-block-41 odd block-without-title" id="block-block-41">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <h1 class="term-header news">WPR News</h1>
+    </div>
+  </div>
+</div><div class="block block-system block-main block-system-main even block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div class="view view-site-sections view-id-site_sections view-display-id-page view-dom-id-fe6dc4c384221b4d1e55de01fafa4a8c">
+            <div class="view-header">
+      <p>Wisconsin Public Radio has a broadcast and online news staff of more than 20 journalists and web professionals located in seven regions. There are over 20,000 news stories available online. </p>
+    </div>
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div  id="node-segments-1912006" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-rachael-vasquez odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/gop-divisions-over-2020-election-january-6-insurrection">GOP divisions over the 2020 election, January 6 insurrection</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 10, 2022 - 3:30pm</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/gop-divisions-over-2020-election-january-6-insurrection"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/field/image/ap21007067368664.jpg?itok=oJexhiwo" width="300" height="167" alt="Violent protesters, loyal to President Donald Trump, storm the Capitol" title="Violent protesters, loyal to President Donald Trump, storm the Capitol" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">The Republican National Committee recently sanctioned two Republican members of Congress, and deemed the January 6 insurrection "legitimate political discourse." We look at the divide over those moves in the GOP, and talk about divisions that remain among Wisconsin Republicans over the 2020 election.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div  id="node-article-1912286" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-shawn-johnson even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/republican-lawmaker-seeking-overturn-2020-election-plans-run-governor'>Republican lawmaker seeking to overturn 2020 election plans run for governor</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 10, 2022 - 10:15am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/republican-lawmaker-seeking-overturn-2020-election-plans-run-governor'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/articles/2017/08/capitol.jpg?itok=v6AytWPk" width="300" height="167" alt="Read full article: Republican lawmaker seeking to overturn 2020 election plans run for governor" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>A Republican state representative who made a name for himself by trying to decertify the results of Wisconsin's 2020 presidential election has filed paperwork to run for governor.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div  id="node-segments-1910476" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-keegan-kyle odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/milwaukee-mayor-candidate-interviews-earnell-lucas">Milwaukee mayor candidate interviews: Earnell Lucas</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 10, 2022 - 7:45am</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/milwaukee-mayor-candidate-interviews-earnell-lucas"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/field/image/ch_earnell_lucas.jpg?itok=kN13tAeS" width="300" height="167" alt="Earnell Lucas speaking" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">On Feb. 15, voters will narrow the field of candidates seeking to become Milwaukee’s next mayor. As part of a series of conversations before the primary election, we speak with Earnell Lucas about his candidacy.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div  id="node-segments-1911691" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-steven-potter even clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/autism-and-art-grant-will-fund-creativity-projects-students-autism-spectrum">Autism and art: Grant will fund creativity projects for students on the autism spectrum</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 10, 2022 - 7:30am</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/autism-and-art-grant-will-fund-creativity-projects-students-autism-spectrum"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/tech.jpeg?itok=1ZdSI3n3" width="300" height="167" alt="A mentor and a student at Islands of Brilliance work on a project together in Milwaukee" title="A mentor and a student at Islands of Brilliance work on a project together in Milwaukee" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">A grant from the National Endowment for the Arts will help a Milwaukee non-profit establish a research lab to study how people with autism interact with creative technologies. We discuss how this grant will lead to new learning opportunities for children and young adults on the autism spectrum.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div  id="node-segments-1911636" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-mackenzie-krumme odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/integrating-naturopathic-medicine-healthcare">Integrating naturopathic medicine into healthcare</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 10, 2022 - 7:00am</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/integrating-naturopathic-medicine-healthcare"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/ap20079095012069.jpg?itok=5IeRlDDo" width="300" height="167" alt="Herbal medicine" title="Herbal medicine " /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">A new law in Wisconsin allows naturopathic doctors to be licensed and regulated by an examining board. We talk with a doctor who specializes in family and herbal medicine about integrating naturopathic practices into healthcare.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div  id="node-article-1912106" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-christine-hatfield even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/reckless-driving-housing-among-issues-debated-milwaukee-mayoral-forum'>Reckless driving, housing among issues debated at Milwaukee mayoral forum</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 11:05pm</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/reckless-driving-housing-among-issues-debated-milwaukee-mayoral-forum'><img src="https://www.wpr.org/sites/default/files/styles/16-9_small/public/220209_mkemayor01.jpg?itok=2sYrFOYJ" width="300" height="167" alt="Read full article: Reckless driving, housing among issues debated at Milwaukee mayoral forum" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>The seven candidates competing in Milwaukee's mayoral primary focused on topics including reckless driving and housing at a forum on Wednesday night.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div  id="node-article-1912061" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-shawn-johnson odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/republican-led-committee-hears-testimony-felon-wisconsin-election-review'>Republican-led committee hears testimony from felon in Wisconsin election review</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 7:35pm</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/republican-led-committee-hears-testimony-felon-wisconsin-election-review'><img src="https://www.wpr.org/sites/default/files/styles/16-9_small/public/image_from_ios_1_3.jpg?itok=KHZcFw9c" width="300" height="167" alt="Read full article: Republican-led committee hears testimony from felon in Wisconsin election review" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>A Republican-led Assembly panel took testimony Wednesday from a felon convicted of mail and bank fraud who is now conducting his own investigation of the 2020 election.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div  id="node-article-1912001" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-diane-bezucha even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/us-mens-olympic-curling-team-wins-first-game-against-russia'>US men’s Olympic curling team wins first game against Russia</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 5:05pm</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/us-mens-olympic-curling-team-wins-first-game-against-russia'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/ap22040627459443_0.jpg?itok=yLOPMLn1" width="300" height="167" alt="Read full article: US men’s Olympic curling team wins first game against Russia" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>The U.S. men’s curling team won their first game in Beijing, defeating Russia 6-5. And with four Wisconsin curlers representing Team USA, the victory has fans back home cheering.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div  id="node-segments-1911416" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-dean-knetter odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/how-fentanyl-changing-drug-enforcement-and-prevention-efforts">How fentanyl is changing drug enforcement and prevention efforts</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 3:00pm</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/how-fentanyl-changing-drug-enforcement-and-prevention-efforts"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/ap19350622901877.jpg?itok=maifZQfK" width="300" height="167" alt="Fentanyl-laced opioid pills" title="Fentanyl-laced opioid pills" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">A federal commission is out with dozens of recommendations to cut down on fentanyl trafficking, ranging from prevention of smuggling to reducing the demand for opioid in the United States. We talk with a journalist who's followed the drug trade for years about how the synthetic opioid has raised the...</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div  id="node-article-1911796" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-rich-kremer even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/dick-leinenkugel-stepping-down-head-brewery-years-end'>Dick Leinenkugel stepping down as head of the brewery at year's end</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 2:00pm</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/dick-leinenkugel-stepping-down-head-brewery-years-end'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/ap213055478614.jpg?itok=uSnQaaPI" width="300" height="167" alt="Read full article: Dick Leinenkugel stepping down as head of the brewery at year&#039;s end" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Dick Leinenkugel, who has lead the Chippewa Falls-based Jacob Leinenkugel Brewing Co. since 2014, will retire at the end of this year. His nephew, Tony Bugher, will take the helm and is tasked with modernizing the company. </p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div  id="node-article-1911806" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-rob-mentzer odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/wausau-finds-all-city-wells-contain-elevated-pfas-levels-will-study-reduction-methods'>Wausau finds all city wells contain elevated PFAS levels, will study reduction methods</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 2:00pm</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/wausau-finds-all-city-wells-contain-elevated-pfas-levels-will-study-reduction-methods'><img src="https://www.wpr.org/sites/default/files/styles/16-9_small/public/MI%20Tap%20Water%201.JPG?itok=FQ_nNuXS" width="300" height="167" alt="Read full article: Wausau finds all city wells contain elevated PFAS levels, will study reduction methods" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>The city of Wausau will study ways of removing PFAS from its drinking water after tests revealed elevated levels of the harmful "forever chemicals" in all six city wells.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div  id="node-segments-1910471" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-keegan-kyle even clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/milwaukee-mayor-candidate-interviews-bob-donovan">Milwaukee mayor candidate interviews: Bob Donovan</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 7:45am</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/milwaukee-mayor-candidate-interviews-bob-donovan"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/field/image/img_8251.jpg?itok=kNw4xtbs" width="300" height="167" alt="Milwaukee Alderman Bob Donovan speaks to reporters " title="Milwaukee Alderman Bob Donovan speaks to reporters " /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">On Feb. 15, voters will narrow the field of candidates seeking to become Milwaukee’s next mayor. As part of a series of conversations before the primary election, we speak with Bob Donovan about his candidacy.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div  id="node-segments-1886436" class="ds-1col node node-segments view-mode-taxonomy_content node-published node-not-promoted node-not-sticky author-christine-hatfield odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2><a href="/supporting-children-orphaned-covid-19">Supporting children orphaned by COVID-19</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 7:30am</span></div></div></div><div class="field field-name-field-image-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/supporting-children-orphaned-covid-19"><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/images/segments/brain-5868033_1920_0.jpg?itok=UTqTn0xr" width="300" height="167" alt="An illustrated image shows outline of female profile in black against green background." title="An illustrated image shows outline of female profile in black against green background." /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">A study estimates more than 40,000 children have lost parents to COVID-19. Our guest co-authored the work. She explains what bereavement looks like in kids, how the pandemic changes grief and what public health experts say needs to happen to support these orphaned children.</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div  id="node-article-1911576" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-elizabeth-dohms-harter even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='https://wisconsinlife.org/story/olympic-curler-matt-hamilton-surprises-sun-prairie-boy-on-backyard-rink/'>Olympic curler Matt Hamilton surprises Sun Prairie boy on backyard rink</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 6:25am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='https://wisconsinlife.org/story/olympic-curler-matt-hamilton-surprises-sun-prairie-boy-on-backyard-rink/'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/wi_life.jpg?itok=yQltw6gE" width="300" height="167" alt="Read full article: Olympic curler Matt Hamilton surprises Sun Prairie boy on backyard rink" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>In 2018, 5-year-old Jaxton Ernst caught the curling bug when he saw Wisconsinite Matt Hamilton win gold at the Winter Olympics. Four years later, the Olympian surprised Jaxton at his Sun Prairie home.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div  id="node-article-1911321" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-shamane-mills odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/2-medical-marijuana-proposals-surface-wisconsin'>2 medical marijuana proposals surface in Wisconsin</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 6:20am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/2-medical-marijuana-proposals-surface-wisconsin'><img src="https://www.wpr.org/sites/default/files/styles/16-9_small/public/211105_tallpines02.jpg?itok=kOclT5ls" width="300" height="167" alt="Read full article: 2 medical marijuana proposals surface in Wisconsin" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>There are dueling legislative proposals to legalize medical marijuana in Wisconsin — one from each party. But with disagreement over whether and how Wisconsin might do this, the path forward isn’t clear, even as more than half the states in the U.S. already allow it.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div  id="node-article-1911261" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-jonah-beleckis even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/michael-sampson-doesnt-want-micromanage-milwaukee-police-rising-homicides'>Michael Sampson doesn’t want to 'micromanage' Milwaukee police on rising homicides</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 6:10am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/michael-sampson-doesnt-want-micromanage-milwaukee-police-rising-homicides'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/michael_sampson-01.jpg?itok=UdT8UboO" width="300" height="167" alt="Read full article: Michael Sampson doesn’t want to &#039;micromanage&#039; Milwaukee police on rising homicides" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p style="margin-bottom:11px">A Milwaukee business owner running to be mayor said Tuesday the city’s lateness in ordering a mask mandate cost lives, and that he would leave it to the police department to address the record number of homicides.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-17 views-row-odd">
+    <div  id="node-article-1911386" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-hope-kirwan odd clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/wisconsin-rent-assistance-providers-say-renters-are-still-struggling-could-be-putting-strain'>Wisconsin rent assistance providers say renters are still struggling. That could be putting a strain on relationships with landlords.</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 6:00am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/wisconsin-rent-assistance-providers-say-renters-are-still-struggling-could-be-putting-strain'><img src="https://wpr-public.s3.amazonaws.com/wprorg/styles/16-9_small/s3/rental_assistance_rental_sign02-771x513.jpg?itok=6CbHphGW" width="300" height="167" alt="Read full article: Wisconsin rent assistance providers say renters are still struggling. That could be putting a strain on relationships with landlords." /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>State consumer protection officials saw a 34 percent increase in the number of landlord-tenant complaints in 2021.</p>
+</div></div></div></div>
+
+  </div>
+  <div class="views-row views-row-18 views-row-even views-row-last">
+    <div  id="node-article-1911096" class="ds-1col node node-article node-promoted view-mode-taxonomy_content node-published node-not-sticky author-shawn-johnson even clearfix term-item clearfix">
+
+
+  <div class="field field-name-external-title-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2 class='external-link-title'><a href='/gop-election-bills-would-make-legislature-more-powerful-and-absentee-voting-more-difficult'>GOP election bills would make Legislature more powerful and absentee voting more difficult</a></h2></div></div></div><div class="field field-name-field-date-air field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">February 9, 2022 - 5:00am</span></div></div></div><div class="field field-name-image-external-link field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href='/gop-election-bills-would-make-legislature-more-powerful-and-absentee-voting-more-difficult'><img src="https://www.wpr.org/sites/default/files/styles/16-9_small/public/210406_voting03.jpg?itok=pR0cfP-v" width="300" height="167" alt="Read full article: GOP election bills would make Legislature more powerful and absentee voting more difficult" /></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>With roughly a month to go before they’re scheduled to adjourn their legislative session, GOP lawmakers are pushing a package of bills that would give themselves more power over elections and put up more obstacles for voting absentee.</p>
+</div></div></div></div>
+
+  </div>
+    </div>
+
+      <h2 class="element-invisible">Pages</h2><div class="item-list"><ul class="pager clearfix"><li class="pager-current first">1</li><li class="pager-item"><a title="Go to page 2" href="/news?page=1">2</a></li><li class="pager-item"><a title="Go to page 3" href="/news?page=2">3</a></li><li class="pager-item"><a title="Go to page 4" href="/news?page=3">4</a></li><li class="pager-item"><a title="Go to page 5" href="/news?page=4">5</a></li><li class="pager-item"><a title="Go to page 6" href="/news?page=5">6</a></li><li class="pager-item"><a title="Go to page 7" href="/news?page=6">7</a></li><li class="pager-item"><a title="Go to page 8" href="/news?page=7">8</a></li><li class="pager-item"><a title="Go to page 9" href="/news?page=8">9</a></li><li class="pager-ellipsis">…</li><li class="pager-next"><a title="Go to next page" href="/news?page=1">next ›</a></li><li class="pager-last last"><a title="Go to last page" href="/news?page=1788">last »</a></li></ul></div>
+
+
+
+
+</div>    </div>
+  </div>
+</div>		  </div>
+		</aside>
+
+	<!-- Container divs for top right content -->
+	<div id="region-content-top-right" class="grid-6 region region-content-top-right">
+		<div class="region-inner region-content-top-right-inner"><div class="grid-3 region region-sidebar-first-top" id="region-sidebar-first-top">
+  <div class="region-inner region-sidebar-first-top-inner">
+    <div class="block block-block underwriting underwriting-1 block-5 block-block-5 odd block-without-title" id="block-block-5">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <!-- /1006475/WPR_ORG_300x250A --><p style="text-align: center">Sponsored by:</p>
+<div id="div-gpt-ad-1495910762556-0" style="height:250px; width:300px; margin: 0 auto;">
+<script>
+<!--//--><![CDATA[// ><!--
+
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1495910762556-0'); });
+
+//--><!]]>
+</script></div>
+<p class="sponsor-link"><a href="/support/corporate">Become a WPR Sponsor</a></p>
+    </div>
+  </div>
+</div><section class="block block-block content-section block-101 block-block-101 even" id="block-block-101">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">News Podcasts</h2>
+
+    <div class="content clearfix">
+      <p>You can subscribe to a podcast of all our stories or stories with a specific topic. See all the <a href="/news-podcasts">WPR News Podcasts</a>!</p>
+    </div>
+  </div>
+</section><div class="block block-block underwriting underwriting-2 block-20 block-block-20 odd block-without-title" id="block-block-20">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <!-- /1006475/WPR_ORG_300x250B --><p style="text-align: center">Sponsored by:</p>
+<div id="div-gpt-ad-1495910887526-0" style="height:250px; width:300px; margin: 0 auto;">
+<script>
+<!--//--><![CDATA[// ><!--
+
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1495910887526-0'); });
+
+//--><!]]>
+</script></div>
+<p class="sponsor-link"><a href="/support/corporate">Become a WPR Sponsor</a></p>
+    </div>
+  </div>
+</div><div class="block block-block content-section block-66 block-block-66 even block-without-title" id="block-block-66">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <!-- Begin MailChimp Signup Form --><link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+#mc_embed_signup {background:#fff; clear:left; font:"Proxima Nova",Arial,sans-serif;}
+  #mce-responses .response a {font-style:italic !important;}
+  #mc_embed_signup .mc-field-group input {padding:2px 0 !important;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+/*--><!]]>*/
+</style><div id="mc_embed_signup">
+<form action="//wpr.us11.list-manage.com/subscribe/post?u=3cb4c021b28e511db7dc0b1ca&amp;id=8cef131bb2&amp;SIGNUPFROM=Sidebarblock" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+<h2 class="block-title" style="font-weight:normal !important; padding: .1em .25em;">Subscribe To WPR Newsletters</h2>
+<div class="mc-field-group input-group">Keep updated on the latest news and information. Sign up now!</p>
+<ul>
+<li><input checked="checked" id="mce-group[13645]-13645-0" name="group[13645][1]" type="checkbox" value="1" />  <label for="mce-group[13645]-13645-0">Morning Top Headlines</label></li>
+<li><input checked="checked" id="mce-group[13645]-13645-1" name="group[13645][2]" type="checkbox" value="2" />  <label for="mce-group[13645]-13645-1">Afternoon Top Headlines</label></li>
+</ul>
+</div>
+<div class="mc-field-group"><label for="mce-EMAIL">Email Address (required)</label> <input class="required email" id="mce-EMAIL" name="EMAIL" type="email" value="" /></div>
+<div class="clear" id="mce-responses">
+<div class="response" id="mce-error-response" style="display:none"></div>
+<div class="response" id="mce-success-response" style="display:none"></div>
+</div>
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_3cb4c021b28e511db7dc0b1ca_8cef131bb2" tabindex="-1" type="text" value="" /></div>
+<div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" style="color:#000 !important; background-image: none !important; text-shadow:none !important;" type="submit" value="Subscribe" /><br /><span style="font-family:'Proxima Nova',Arial,sans-serif !important;"><a href="http://us11.campaign-archive2.com/home/?u=3cb4c021b28e511db7dc0b1ca&amp;id=8cef131bb2" target="_blank">See the newsletter archives</a></span></div>
+</div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+//--><!]]>
+</script><!--End mc_embed_signup-->    </div>
+  </div>
+</div>  </div>
+</div>      </div>
+</div>
+	<!-- Closing divs / for bottom right content -->
+		</div>
+	</div>
+
+  </div>
+</div></section>
+
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <div class="block block-block contact-copyright block-11 block-block-11 odd block-without-title" id="block-block-11">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <p><a class="wpr-logo-footer" href="/">Wisconsin Public Radio</a></p>
+<div class="section-partners clearfix"><span class="footer-logos"><a class="logo-ECB" href="https://ecb.org/">ECB</a> <a class="logo-UWM" href="https://www.wisc.edu/">UW-Madison</a> <a class="logo-NPR" href="https://www.npr.org/">National Public Radio</a> <a class="logo-WPT" href="https://pbswisconsin.org/">PBS Wisconsin</a></span></div>
+<p>For questions or comments, contact WPR’s Audience Services at 1-800-747-7444, email <a href="mailto:listener@wpr.org">listener@wpr.org</a> or use our <a href="/email-and-questions">Listener Feedback form</a>.</p>
+<p>Find out how to <a href="/support">Support WPR</a>.</p>
+<p>View our <a href="/privacy-policy-and-terms-use">privacy policy</a>.</p>
+<p style="font-size: 12px;">© 2022 by Wisconsin Public Radio, a service of the <a href="https://www.ecb.org/">Wisconsin Educational Communications Board</a> and the <a href="https://www.wisc.edu/">University of Wisconsin-Madison</a>.</p>
+<!-- Adform Tracking Code BEGIN --><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 1880615
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://a2.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+
+//--><!]]>
+</script><p><noscript></p>
+<p style="margin:0;padding:0;border:0;">
+        <img src="https://a2.adform.net/Serving/TrackPoint/?pm=1880615" width="1" height="1" alt="" /></p>
+<p></noscript></p>
+<!-- Adform Tracking Code END -->    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-12 region region-footer-second" id="region-footer-second">
+  <div class="region-inner region-footer-second-inner">
+    <div class="block block-block element-invisible block-381 block-block-381 odd block-without-title" id="block-block-381">
+  <div class="block-inner clearfix">
+
+    <div class="content clearfix">
+      <div>
+<div id="splashify-subtext"><a class="donate" href="https://give.wpr.org/page/15344/donate/1?utm_source=wpr.org&amp;utm_medium=Splash&amp;utm_campaign=R_2021_CYEMM&amp;utm_term=Calendar+Year-end+Splash&amp;utm_content=SplashCYE2021" target="_blank"></p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@media screen and (max-width: 899px) {
+  .splash-container {
+    background: url('/sites/default/files/media/Splash_CYE20212.png') top left no-repeat; .splashify .outer, .splash-container { width: 290px; }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .splash-container {
+    background: url('/sites/default/files/media/Splash_CYE2021.png') top left no-repeat; .splashify .outer, .splash-container { width: 500px; }
+  }
+}
+
+/*--><!]]>*/
+</style><p></a> </p>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+(function($){
+
+$(document).bind('cbox_complete', function(){
+$('#colorbox .splash-container').append($('#splashify-subtext').clone(true));
+});
+
+})(jQuery);
+
+//--><!]]>
+</script></div>
+</div>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+      </div>
+</div><script type="text/javascript" src="/sites/default/files/advagg_js/js__tjK0BTw4Sn7fPEXLvrvjDC-SNf6zYdefdw931ifyqdI__fy9Xovrz7wXzEgDHjx_V7nY8m5dSo4N6TBpAL7ACRYM__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__Dx87WVqe4v5JxdO5NQXWuqi4N2DXrrivAJ5F7KUcBCY__qAl84FcCv2jyN22yFGS5Oc85cjd9zKX6p_cFNLGhe-M__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js" async="async"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__AyRCUBAixsvHLIRhuEcKQIKXRR5J0YvjYRe9ZN6Azlw__ZtQFk19IMTY97D0mVo93S51oxP0aObBijkDDSCNq2ls__-4E7ZdMlPahmlMWRPrD6rknX2JXBnIar4o5Z7_14rgY.js"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"8d7a4982ef","applicationID":"17973382","transactionName":"ZFxUZhECVkpVBhAPX10Wd1EXCldXGxMNA0dAZkZTBAY=","queueTime":0,"applicationTime":1671,"atts":"SBtXEFkYRUQ=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

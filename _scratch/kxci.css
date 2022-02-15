@@ -1,0 +1,18 @@
+.spinitron-content .view-page {
+    margin-left: 16rem;
+}
+.spinitron-content .view-page .head.station {
+    display: none;
+}
+.spinitron-content .ark-player__picker .select-css {
+    height: initial;
+    padding: initial;
+}
+.spinitron-content .ark-player-feedback {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em !important;
+    padding-bottom: 1em;
+}
+.spinitron-content .ark-player-feedback a {
+    font-size: 0.7rem !important;
+}

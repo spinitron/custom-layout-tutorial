@@ -1,0 +1,216 @@
+.spinitron-content .view-page {
+    clear: both;
+    padding: 0;
+}
+
+.spinitron-content .view-page .head {
+    position: relative;
+    top: -1.6em;
+}
+
+.responsive-layout-normal .spinitron-content .ark-player,
+.responsive-layout-normal .spinitron-content .ark-player-feedback {
+    display: none;
+}
+
+.spinitron-content p {
+    font-size: inherit;
+}
+
+.spinitron-content .playlist-list p {
+    font-family: 'Sina Nova', Georgia, 'Times New Roman', serif !important;
+    font-size: 113%;
+    color: black;
+}
+
+.spinitron-content .show-title {
+    padding: 10px 0 10px 50px;
+    font-size: 22px;
+    font-weight: normal;
+    background: url('data:image/png;base64,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')
+        left center no-repeat;
+}
+
+.spinitron-content .playlist-list .expandable .row,
+.spinitron-content .playlist-list .toggle {
+    display: none !important;
+}
+
+.spinitron-content .playlist-list .expandable .details {
+    display: block !important;
+}
+
+.spinitron-content .ark-play-button-box {
+    display: none !important;
+}
+.spinitron-content .test-station-episode-image {
+    max-height: 12em;
+    float: left !important;
+    margin: 0.33em 1.5em 0.5em 0;
+    display: block;
+}
+
+.spinitron-content .playlist-list .list-item {
+    padding-bottom: 1em;
+}
+
+.spinitron-content .playlist-list .details {
+    color: #555;
+}
+
+.spinitron-content .playlist-list .details .timeslot,
+.spinitron-content .playlist-list .details .dj-name,
+.spinitron-content .playlist-list .details .show-categoty,
+.spinitron-content .playlist-list .details .show-title {
+    margin: 0;
+    font: inherit !important;
+}
+.spinitron-content .playlist-list .details .timeslot,
+.spinitron-content .playlist-list .details .dj-name {
+    display: inline-block;
+    font-size: 12px !important;
+    position: relative;
+    top: 3.5em;
+}
+
+.spinitron-content .playlist-list .details .show-title {
+    font-size: 1.2em;
+}
+
+.spinitron-content .playlist-list .details .episode-name {
+    margin-bottom: 5px !important;
+    line-height: 1.3em;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    top: -1em;
+    position: relative;
+}
+
+.spinitron-content .head.station {
+    display: none;
+}
+
+.spinitron-content .mdl-layout-title {
+    font-weight: 600;
+    font-size: 200%;
+    color: white;
+    text-decoration: none;
+}
+
+.spinitron-content nav .programming-nav-heading {
+    margin-left: 1em;
+}
+
+.spinitron-content .mdl-layout__drawer .mdl-layout-title {
+    color: hsl(0, 0%, 50%);
+}
+
+.spinitron-content main > .mdl-layout__tab-panel {
+    padding: 8px;
+    padding-top: 48px;
+}
+
+.spinitron-content .mdl-card {
+    height: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.spinitron-content .mdl-card > * {
+    height: auto;
+}
+
+.spinitron-content .mdl-card .mdl-card__supporting-text {
+    margin: 40px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0;
+    color: inherit;
+    width: calc(100% - 80px);
+}
+
+.test-website.spinitron-content .mdl-card__supporting-text h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.spinitron-content .mdl-card__actions {
+    margin: 0;
+    padding: 4px 40px;
+    color: inherit;
+}
+
+.spinitron-content .mdl-card__actions a {
+    color: #00bcd4;
+    margin: 0;
+}
+
+.spinitron-content .mdl-card__actions a:hover,
+.spinitron-content .mdl-card__actions a:active {
+    color: inherit;
+    background-color: transparent;
+}
+
+.spinitron-content .mdl-card__supporting-text + .mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.spinitron-content .mdl-layout__content section {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.spinitron-content section.section--center {
+    max-width: 860px;
+}
+
+.spinitron-content section > header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.spinitron-content section > .section__play-btn {
+    text-align: center;
+    min-height: 200px;
+}
+
+.spinitron-content section > header > .material-icons {
+    font-size: 3rem;
+}
+
+.spinitron-content section.section--center .section__text:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.spinitron-content .mdl-card .mdl-card__supporting-text > h3:first-child {
+    margin-bottom: 24px;
+}
+
+.spinitron-content .mdl-layout__tab-panel:not(#overview) {
+    background-color: white;
+}
+
+.view-page .spin-cal .fc-event {
+    color: #333;
+    font-size: 0.83em;
+    background: #eee;
+    border-color: #aaa;
+    margin: 1px 1px 0 0;
+    border-radius: 0;
+    line-height: 1.2;
+    padding: 0.2em;
+    font-family: 'open sans', sans-serif;
+}

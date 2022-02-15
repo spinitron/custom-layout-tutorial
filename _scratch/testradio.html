@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>TEST 90.3 The Voice of Foo, Barton PA</title>
+  <meta name="description" content="Demonstration of the custom layout feature of Spinitron for seamless integration of playlists, calendar, etc.">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-orange.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style>
+</head>
+
+<body class="test-website mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+        <a class="mdl-layout-title" href="http://www.testradio.org">TEST 90.3 Barton PA</a>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="http://www.testradio.org">About</a>
+          <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/?layout=1">On-air</a>
+          <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/calendar?layout=1">Programs</a>
+          <a class="mdl-navigation__link" href="http://www.testradio.org">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+      <h3 class="mdl-layout-title">TEST 90.3</h3>
+
+      <nav class="mdl-navigation">
+        <h5 class="programming-nav-heading">DJs</h5>
+
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/dj/10988/Tom?layout=1">Tom</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/dj/11338/David?layout=1">David</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/dj/11066/Joker?layout=1">Joker</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/dj/101167/Erin?layout=1">Erin</a>
+      </nav>
+
+      <nav class="mdl-navigation">
+        <h5 class="programming-nav-heading">Shows</h5>
+
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/35526/Folk-Psychology?layout=1">Folk Psychology</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/7937/Square-Roots?layout=1">Square Roots</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/35125/Children-s-Hour?layout=1">Children's Hour</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/35529/Jazz-Abstractions?layout=1">Jazz Abstractions</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/35128/Oldies-and-Goodies?layout=1">Oldies and Goodies</a>
+        <a class="mdl-navigation__link" href="https://programs.testradio.org/TEST/show/35119/Country-Hours?layout=1">Country Hours</a>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+      <div class="mdl-layout__tab-panel is-active" id="overview">
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text">
+{{SPINITRON_CONTENT}}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer--middle-section">
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer--heading">About TEST 90.3</h1>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="http://www.testradio.org">History</a></li>
+              <li><a href="http://www.testradio.org">Staff</a></li>
+              <li><a href="http://www.testradio.org">Contact</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer--heading">Support us</h1>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="http://www.testradio.org">Donate</a></li>
+              <li><a href="http://www.testradio.org">Volunteer</a></li>
+              <li><a href="http://www.testradio.org">DJ</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer--heading">Programming</h1>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="http://www.testradio.org">Program calendar</a></li>
+              <li><a href="http://www.testradio.org">Shows</a></li>
+              <li><a href="http://www.testradio.org">DJs</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer--heading">FAQ</h1>
+            <ul class="mdl-mega-footer--link-list">
+              <li><a href="http://www.testradio.org">Questions</a></li>
+              <li><a href="http://www.testradio.org">Answers</a></li>
+              <li><a href="http://www.testradio.org">Pholosophy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mdl-mega-footer--bottom-section">
+          <div class="mdl-logo">
+            More Information
+          </div>
+          <ul class="mdl-mega-footer--link-list">
+            <li><a href="http://www.testradio.org">Help</a></li>
+            <li><a href="http://www.testradio.org">Privacy and Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <a href="https://github.com/spinitron/TEST" target="_blank" id="view-source"
+    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View
+    Source</a>
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

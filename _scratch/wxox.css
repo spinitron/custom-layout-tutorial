@@ -1,0 +1,75 @@
+/* Change the color of blocks in the calendar according to show category */
+
+.spin-cal .category-music {
+    background-color: #7fb3d5 !important;
+}
+.spin-cal .category-talk {
+    background-color: #d98880 !important;
+}
+.spin-cal .category-experimental {
+    background-color: #f0b27a !important;
+}
+
+.spinitron-content .view-page {
+    max-width: 60em;
+    color: white;
+}
+.spinitron-content .head.station {
+    display: none;
+}
+.spinitron-content .spin-cal tr {
+    color: #aaa;
+    font-family: tahoma, sans-serif;
+    font-size: 90%;
+}
+.spinitron-content .ark-player {
+    border: 1px solid white;
+    color: black;
+    fill: rgb(49, 255, 49);
+    background: #333;
+    margin-top: 0;
+    line-height: normal;
+}
+.spinitron-content .ark-player__picker .select-css {
+    background: black;
+    color: white;
+}
+.spinitron-content .ark-player__picker option {
+    color: #999;
+}
+.spinitron-content .ark-player__status {
+    color: rgb(49, 255, 49);
+    text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+    animation: glow 5s linear infinite;
+}
+@keyframes glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+.spinitron-content .ark-player-feedback {
+    border-bottom: 1px solid white;
+    margin-bottom: 2em !important;
+    padding-bottom: 1em;
+}
+.spinitron-content .ark-player-feedback a {
+    font-size: 0.7rem !important;
+}
+.spinitron-content .fc-event {
+    font-size: 0.8rem;
+}
+.spinitron-content .table-striped tr:nth-child(2n + 1) {
+    background-color: initial;
+}
+.spinitron-content .playlist.spins .spin-text .artist,
+.spinitron-content .public-spins .spin-text .artist,
+.spinitron-content .playlist.spins .spin-text .release,
+.spinitron-content .public-spins .spin-text .release {
+    color: #ffc12d;
+}
+.spinitron-content .public-spins a {
+    color: white;
+}

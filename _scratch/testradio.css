@@ -1,0 +1,160 @@
+.test-website .playlist-list .expandable .row,
+.test-website .playlist-list .toggle {
+    display: none !important;
+}
+
+.test-website .playlist-list .expandable .details {
+    display: block !important;
+}
+
+.test-station-episode-image {
+    max-height: 12em;
+    float: right;
+    display: block;
+}
+
+.test-website .playlist-list .details {
+    color: #555;
+}
+
+.test-website .playlist-list .details .dj-name,
+.test-website .playlist-list .details .show-categoty,
+.test-website .playlist-list .details .show-title {
+    margin: 0;
+}
+
+.test-website .playlist-list .details .show-title {
+    font-size: 1.2em;
+}
+
+.test-website .playlist-list .details .episode-name {
+    margin: 0.25em 0;
+}
+
+.test-website .head.station {
+    display: none;
+}
+
+.test-website .mdl-layout-title {
+    font-weight: 600;
+    font-size: 200%;
+    color: white;
+    text-decoration: none;
+}
+
+.test-website nav .programming-nav-heading {
+    margin-left: 1em;
+}
+
+.test-website .mdl-layout__drawer .mdl-layout-title {
+    color: hsl(0, 0%, 50%);
+}
+
+.test-website main>.mdl-layout__tab-panel {
+    padding: 8px;
+    padding-top: 48px;
+}
+
+.test-website .mdl-card {
+    height: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.test-website .mdl-card>* {
+    height: auto;
+}
+
+.test-website .mdl-card .mdl-card__supporting-text {
+    margin: 40px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0;
+    color: inherit;
+    width: calc(100% - 80px);
+}
+
+.test-website.test-website .mdl-card__supporting-text h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.test-website .mdl-card__actions {
+    margin: 0;
+    padding: 4px 40px;
+    color: inherit;
+}
+
+.test-website .mdl-card__actions a {
+    color: #00BCD4;
+    margin: 0;
+}
+
+.test-website .mdl-card__actions a:hover,
+.test-website .mdl-card__actions a:active {
+    color: inherit;
+    background-color: transparent;
+}
+
+.test-website .mdl-card__supporting-text+.mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.test-website .mdl-layout__content section {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.test-website section.section--center {
+    max-width: 860px;
+}
+
+.test-website section>header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.test-website section>.section__play-btn {
+    text-align: center;
+    min-height: 200px;
+}
+
+.test-website section>header>.material-icons {
+    font-size: 3rem;
+}
+
+.test-website section.section--center .section__text:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .13);
+}
+
+.test-website .mdl-card .mdl-card__supporting-text>h3:first-child {
+    margin-bottom: 24px;
+}
+
+.test-website .mdl-layout__tab-panel:not(#overview) {
+    background-color: white;
+}
+
+.view-page .spin-cal .fc-event {
+    color: #333;
+    font-size: .83em;
+    background: #eee;
+    border-color: #aaa;
+    margin: 1px 1px 0 0;
+    border-radius: 0;
+    line-height: 1.2;
+    padding: 0.2em;
+    font-family: "open sans", sans-serif;
+}
