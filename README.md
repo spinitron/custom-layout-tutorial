@@ -3,20 +3,9 @@ Web Integration with Spinitron
 
 - JS Widgets
 - Iframes
-- API
+- API https://spinitron.github.io/v2api/
     ...and now also...
-- Custom layout
-
-## Concepts
-
-- The awsome power of CSS
-- Page layouts
-- Relative vs. absolute URLs
-- Navigate between your pages and Spinitron pages
-
-
-
-
+- Custom layout https://www.testradio.org/
 
 
 
@@ -30,15 +19,19 @@ https://www.kcsb.org/schedule/
 
 - iframe
     - has custom styles to make it look good
-    - rectange height doesn't adapt to the content
     - navigating Spinitron pages is ok
-    - naviagting elsewhere is weird
+    - rectangle height doesn't adapt to the content
+    - navigating elsewhere is weird
         - https://www.kcsb.org/6080-2/
         - in an iframe
+
+
 
 ## Principle: CSS is powerful medicine
 
 http://www.csszengarden.com/
+
+
 
 ## Magic show 1
 
@@ -49,6 +42,8 @@ http://www.csszengarden.com/
         - to elsewhere, e.g. paypal
 - Web customization form in Spinitron: Admin
 
+
+
 ## Magic show 2
 
 - https://www.wpr.org/   beautiful!
@@ -58,12 +53,12 @@ http://www.csszengarden.com/
 
 
 
-
-
 Test Radio dot ORG
 ==================
 
 ## Principle: Custom layouts is powerful medicine too
+
+Switch PERSONA to TEST
 
 - https://www.testradio.org/
     - has widgets
@@ -72,7 +67,6 @@ Test Radio dot ORG
 - Web customization form: _SAVE CHANGES_
 - https://spinitron.com/TEST/calendar?layout=1
 - VIEW SOURCE
-
 
 
 
@@ -86,8 +80,7 @@ Simplest example
 - Web customization form
     - Only a layout. _SAVE CHANGES_
 - https://spinitron.com/TEST/?layout=1
-- Open dev tools: Insepect
-
+- Open dev tools: Inspect
 ## Principle: Browser Dev Tools also powerful medicine
 
 - change background color, save in custom stylesheet
@@ -98,8 +91,7 @@ Simplest example
         .content .view-page .head {
             display: none;
         }
-
-- https://github.com/spinitron/custom-layout-tutorial
+- explain ancestors, more and less specific selectors, collisions
 
 
 
@@ -131,6 +123,14 @@ Full example from scratch
 - add rules one at a time from
 
 
+
+Advanced example
+================
+
+WXOX
+
+
+
 Advanced topics
 ===============
 
@@ -139,9 +139,3 @@ Advanced topics
 - Your vhost on our server with your host name
 - CNAME in your domain records
 - HTTPS
-
-
-Advanced example
-================
-
-WXOX
